@@ -8,5 +8,8 @@
             "Hexlet\\Code\\": "src/"
         }
     },
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
 }
