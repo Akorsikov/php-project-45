@@ -1,5 +1,10 @@
 <?php
 
+namespace Php\Project\Cli;
+
+use function cli\line;
+use function cli\prompt;
+
 line('Welcome to the Brain Game!');
-$name = promt('May I have your name?');
-line("Hello, %s!, $name");
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
