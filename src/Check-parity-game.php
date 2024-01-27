@@ -35,11 +35,38 @@ namespace Php\Project\Check\Parity\Game;
 use function cli\line;
 use function cli\prompt;
 
-// Поприветствовать и спросить имя игрока;
+const CORRECT_ANSWER = 3;
+const START_RANDOM_NUMBER = 0;
+const FINISH_RANDOM_NUMBER = 100;
+
+
 line('Welcome to the Brain Games!');
 $gamerName = prompt('May I have your name?');
-// Поздороваться с игроком по имени и предложить ответить на вопрос;
 line('Hello, %s', $gamerName);
 line('Answer "yes" if the number is even, otherwise answer "no"');
-// Сгенерировать случайное число например от 0 до 100;
-// Создать логику проверки на три правильных ответа или завершить игру при неправильном ответе;
+
+$correctAnswer = 0;
+
+for (; $correctAnswer < CORRECT_ANSWER;) {
+    $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
+    $evenNumber = ($randomNumber % 2 === 0 ) ? true : false;
+    line("Question: %s", $randomNumber);
+    $gamerAnswer = prompt('Your answer');
+    if ($gamerAnswer === 'yes' && $evenNumber || $gamerAnswer === 'no' && !$evenNumber) {
+        $correctAnswer++;
+        line('Correct!');
+    } else {
+        if ($evenNumber) {
+            $wrongAnswer = ($gamerAnswer === 'yes') ? 'no' : 'yes';
+        } else {
+            $wrongAnswer = ($gamerAnswer === 'no') ? 'yes' : 'no';
+        }
+        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $wrongAnswer);
+        line("Let's try again, %s", $gamerName);
+        break;
+    }
+}
+
+if ($correctAnswer === CORRECT_ANSWER) {
+    line("Congratulations, %s!", $gamerName);
+}
