@@ -1,0 +1,4 @@
+/vendor/
+# added me
+#.gitignore
+/.vscode
