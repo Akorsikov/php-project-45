@@ -35,6 +35,10 @@ use function cli\line;
 use function cli\prompt;
 
 // Поприветствовать и спросить имя игрока;
+line('Welcome to the Brain Games!');
+$gamerName = prompt('May I have your name?');
 // Поздороваться с игроком по имени и предложить ответить на вопрос;
+line('Hello, %s', $gamerName);
+line('Answer "yes" if the number is even, otherwise answer "no"');
 // Сгенерировать случайное число например от 0 до 100;
 // Создать логику проверки на три правильных ответа или завершить игру при неправильном ответе;
