@@ -9,7 +9,7 @@
         },
         "files": [
             "src/Cli.php",
-            "src/Check-parity-game.php"
+            "src/CheckParityGame.php"
         ]
     },
     "require": {
