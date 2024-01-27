@@ -45,9 +45,9 @@ $gamerName = prompt('May I have your name?');
 line('Hello, %s', $gamerName);
 line('Answer "yes" if the number is even, otherwise answer "no"');
 
-$correctAnswer = 0;
+$countCorrectAnswer = 0;
 
-for (; $correctAnswer < CORRECT_ANSWER;) {
+for (; $countCorrectAnswer < CORRECT_ANSWER;) {
     $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
     $evenNumber = ($randomNumber % 2 === 0 ) ? true : false;
     line("Question: %s", $randomNumber);
@@ -57,16 +57,16 @@ for (; $correctAnswer < CORRECT_ANSWER;) {
         line('Correct!');
     } else {
         if ($evenNumber) {
-            $wrongAnswer = ($gamerAnswer === 'yes') ? 'no' : 'yes';
+            $correctAnswer = ($gamerAnswer === 'yes') ? 'no' : 'yes';
         } else {
-            $wrongAnswer = ($gamerAnswer === 'no') ? 'yes' : 'no';
+            $correctAnswer = ($gamerAnswer === 'no') ? 'yes' : 'no';
         }
-        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $wrongAnswer);
+        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
         line("Let's try again, %s", $gamerName);
         break;
     }
 }
 
-if ($correctAnswer === CORRECT_ANSWER) {
+if ($countCorrectAnswer === CORRECT_ANSWER) {
     line("Congratulations, %s!", $gamerName);
 }
