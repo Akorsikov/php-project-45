@@ -53,7 +53,7 @@ for (; $countCorrectAnswer < CORRECT_ANSWER;) {
     line("Question: %s", $randomNumber);
     $gamerAnswer = prompt('Your answer');
     if ($gamerAnswer === 'yes' && $evenNumber || $gamerAnswer === 'no' && !$evenNumber) {
-        $correctAnswer++;
+        $countCorrectAnswer++;
         line('Correct!');
     } else {
         if ($evenNumber) {
