@@ -3,5 +3,5 @@
 
 require_once 'vendor/autoload.php';
 
-use function Php\Project\CheckParityGame\checkNumber;
-checkNumber();
+use function Php\Project\Even\CheckParityGame;
+CheckParityGame();

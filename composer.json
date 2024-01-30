@@ -4,12 +4,9 @@
     "type": "project",
     "license": "MIT",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Cli.php",
-            "src/CheckParityGame.php"
+            "src/Even.php"
         ]
     },
     "require": {

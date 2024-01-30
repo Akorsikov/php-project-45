@@ -32,7 +32,7 @@
  * Congratulations, Bill!
 */
 
-namespace Php\Project\CheckParityGame;
+namespace Php\Project\Even;
 
 use function cli\line;
 use function cli\prompt;
@@ -41,7 +41,7 @@ const CORRECT_ANSWER = 3;
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 100;
 
-function checkNumber(): void
+function CheckParityGame(): void
 {
     line('Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
