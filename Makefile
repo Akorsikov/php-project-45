@@ -2,7 +2,7 @@ install:
 	composer install
 
 brain-games:
-	php bin/brain-games
+	bin/brain-games
 
 brain-even:
 	bin/brain-even
