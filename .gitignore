@@ -1,4 +1,5 @@
 /vendor/
 # added me
-#.gitignore
+.gitignore
 /.vscode
+/temp/
