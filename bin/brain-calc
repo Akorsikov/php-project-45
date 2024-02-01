@@ -10,5 +10,5 @@ if (file_exists($autoloadPathGlobal)) {
     require_once $autoloadPathLocal;
 }
 
-use function Php\Project\Calc\CheckCalcGame;
-checkCalcGame();
+use function Php\Project\Engine\engine;
+engine('calc');
