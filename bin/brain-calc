@@ -11,4 +11,4 @@ if (file_exists($autoloadPathGlobal)) {
 }
 
 use function Php\Project\Calc\CheckCalcGame;
-CheckCalcGame();
+checkCalcGame();

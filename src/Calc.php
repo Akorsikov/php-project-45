@@ -39,45 +39,36 @@ namespace Php\Project\Calc;
 use function cli\line;
 use function cli\prompt;
 
-const CORRECT_ANSWER = 30;
+const CORRECT_ANSWER = 3;
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 20;
-const MATH_OPERATIONS = ['addition', 'multiplication', 'subtruction'];
+const MATH_OPERATIONS = [' + ', ' * ', ' - '];
 
-function CheckCalcGame(): void
+function checkCalcGame(): void
 {
-    line('Welcome to the Brain Games!');
+    line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
     line('What is the result of the expression?');
 
     $countCorrectAnswer = 0;
-    $mathOperation = 'X';
 
     for (; $countCorrectAnswer < CORRECT_ANSWER;) {
         $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
         $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
         $randomMathOperation = rand(0, count(MATH_OPERATIONS) - 1);
+        $mathOperation = MATH_OPERATIONS[$randomMathOperation];
 
-        switch (MATH_OPERATIONS[$randomMathOperation]) {
-            case 'addition':
-                $correctAnswer = $randomNumberOne + $randomNumberTwo;
-                $mathOperation = ' + ';
-                break;
-            case 'multiplication':
-                $correctAnswer = $randomNumberOne * $randomNumberTwo;
-                $mathOperation = ' * ';
-                break;
-            case 'subtruction':
-                $correctAnswer = $randomNumberOne - $randomNumberTwo;
-                $mathOperation = ' - ';
-                break;
-        }
+        $correctAnswer = match ($mathOperation) {
+            ' + ' => $correctAnswer = $randomNumberOne + $randomNumberTwo,
+            ' * ' => $correctAnswer = $randomNumberOne * $randomNumberTwo,
+            ' - ' => $correctAnswer = $randomNumberOne - $randomNumberTwo
+        };
 
         $mathTask = "{$randomNumberOne}{$mathOperation}{$randomNumberTwo}";
         line("Question: %s", $mathTask);
         $gamerAnswer = prompt('Your answer');
-        if ((int) $gamerAnswer === $correctAnswer) {
+        if ($gamerAnswer === "$correctAnswer") {
             $countCorrectAnswer++;
             line('Correct!');
         } else {
