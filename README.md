@@ -7,10 +7,11 @@
 
 #### Brain-even
 
-- [project install](https://asciinema.org/a/ddN1AWsgVBnkU54oe5Mcm9vLi)
-- [Start&Win](https://asciinema.org/a/1sufFt4Cggk54eOexkaUDCYB5)
-- [Start&Lose](https://asciinema.org/a/g79StrDELgjeuIV1z4JLXdNHC)
-### Brain-calc
+- [install-even](https://asciinema.org/a/ddN1AWsgVBnkU54oe5Mcm9vLi)
+- [lose-even](https://asciinema.org/a/g79StrDELgjeuIV1z4JLXdNHC)
+- [win-even](https://asciinema.org/a/1sufFt4Cggk54eOexkaUDCYB5)
+
+#### Brain-calc
 - [install-calc](https://asciinema.org/a/tMpFsoxGiuJ7CtHXEonf09xHJ)
 - [lose-calc](https://asciinema.org/a/LfzCVA8bTsl99RSu2AOxia9nb)
 - [win-calc](https://asciinema.org/a/pW25O9tt2JpfJytjQz52NFpSN)
