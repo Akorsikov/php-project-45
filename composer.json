@@ -5,16 +5,15 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "src/Cli.php",
-            "src/Even.php",
-            "src/Calc.php"
+            "src/Engine.php",
+            "src/Games/Calc.php",
+            "src/Games/Even.php"
         ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.22"
     },
     "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc"
     ],
