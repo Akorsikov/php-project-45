@@ -5,4 +5,8 @@
 
 #### asciinema records
 
-[Brain-even](https://asciinema.org/connect/0b71cee9-81ee-49fa-b9c9-4ef9b4ddd5d7)
+#### Brain-even
+
+- [project install](https://asciinema.org/a/ddN1AWsgVBnkU54oe5Mcm9vLi)
+- [Start&Win](https://asciinema.org/a/1sufFt4Cggk54eOexkaUDCYB5)
+- [Start&Lose](https://asciinema.org/a/g79StrDELgjeuIV1z4JLXdNHC)
