@@ -5,4 +5,7 @@
 
 #### asciinema records
 
-[Brain-even](https://asciinema.org/connect/0b71cee9-81ee-49fa-b9c9-4ef9b4ddd5d7)
+### Brain-calc
+- [install-calc](https://asciinema.org/a/tMpFsoxGiuJ7CtHXEonf09xHJ)
+- [lose-calc](https://asciinema.org/a/LfzCVA8bTsl99RSu2AOxia9nb)
+- [win-calc](https://asciinema.org/a/pW25O9tt2JpfJytjQz52NFpSN)
