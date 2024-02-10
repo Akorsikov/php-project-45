@@ -7,7 +7,7 @@ if (file_exists($autoloadPathGlobal)) {
     require_once $autoloadPathGlobal;
 } else {
     echo($autoloadPathLocal);
-    require_once $autoloadPathLocal;    
+    require_once $autoloadPathLocal;
 }
 
 use function Php\Project\Engine\engine;
