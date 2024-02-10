@@ -20,7 +20,9 @@ function checkParityGame(): bool
         line("Question: %s", $randomNumber);
         $gamerAnswer = prompt('Your answer');
 
-        if ($gamerAnswer === 'yes' && $evenNumber || $gamerAnswer === 'no' && !$evenNumber) {
+        if ($gamerAnswer === 'yes' && $evenNumber
+            || $gamerAnswer === 'no' && !$evenNumber
+        ) {
             $countCorrectAnswer++;
             line('Correct!');
         } else {
@@ -29,7 +31,10 @@ function checkParityGame(): bool
             } else {
                 $correctAnswer = ($gamerAnswer === 'no') ? 'yes' : 'no';
             }
-            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
+            line(
+                '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
+                $gamerAnswer, $correctAnswer
+            );
             break;
         }
     } while ($countCorrectAnswer < CORRECT_ANSWER);
