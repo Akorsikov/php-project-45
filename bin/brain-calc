@@ -6,7 +6,7 @@ $autoloadPathLocal = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPathGlobal)) {
     require_once $autoloadPathGlobal;
 } else {
-    echo( $autoloadPathLocal);
+    echo($autoloadPathLocal);
     require_once $autoloadPathLocal;
 }
 

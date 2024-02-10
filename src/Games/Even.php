@@ -20,7 +20,8 @@ function checkParityGame(): bool
         line("Question: %s", $randomNumber);
         $gamerAnswer = prompt('Your answer');
 
-        if ($gamerAnswer === 'yes' && $evenNumber
+        if (
+            $gamerAnswer === 'yes' && $evenNumber
             || $gamerAnswer === 'no' && !$evenNumber
         ) {
             $countCorrectAnswer++;
@@ -33,7 +34,8 @@ function checkParityGame(): bool
             }
             line(
                 '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
-                $gamerAnswer, $correctAnswer
+                $gamerAnswer,
+                $correctAnswer
             );
             break;
         }
