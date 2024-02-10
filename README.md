@@ -15,3 +15,8 @@
 - [install-calc](https://asciinema.org/a/tMpFsoxGiuJ7CtHXEonf09xHJ)
 - [lose-calc](https://asciinema.org/a/LfzCVA8bTsl99RSu2AOxia9nb)
 - [win-calc](https://asciinema.org/a/pW25O9tt2JpfJytjQz52NFpSN)
+
+#### Brain-gcd
+- [install-gcd](https://asciinema.org/a/A2A4gseXu92ft1NEsleg2OFCT)
+- [lose-gcd](https://asciinema.org/a/I09SBgZcfH7Z3ZthNBYQs3Vye)
+- [win-gcd](https://asciinema.org/a/avB3tTZZ9AkMq5zwbvFMHRxaE)
