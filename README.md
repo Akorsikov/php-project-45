@@ -20,3 +20,8 @@
 - [install-gcd](https://asciinema.org/a/A2A4gseXu92ft1NEsleg2OFCT)
 - [lose-gcd](https://asciinema.org/a/I09SBgZcfH7Z3ZthNBYQs3Vye)
 - [win-gcd](https://asciinema.org/a/avB3tTZZ9AkMq5zwbvFMHRxaE)
+
+#### Brain-progression
+- [install-progression](https://asciinema.org/a/s4GtPvewMCN4UIPeuwOIgDfHq)
+- [lose-progression](https://asciinema.org/a/lP2QchZ0p4KfY97kWFZfll9pG)
+- [win-progression](https://asciinema.org/a/st6NredxlgBvC31rvTo1478qE)

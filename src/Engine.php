@@ -7,6 +7,7 @@ use function cli\prompt;
 use function Php\Project\Even\checkParityGame;
 use function Php\Project\Calc\checkCalcGame;
 use function Php\Project\Gcd\checkGcdGame;
+use function Php\Project\Progression\checkProgressionGame;
 
 function engine(string $game): void
 {
@@ -18,6 +19,7 @@ function engine(string $game): void
         'even' => checkParityGame(),
         'calc' => checkCalcGame(),
         'gcd'  => checkGcdGame(),
+        'progression' => checkProgressionGame(),
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);
