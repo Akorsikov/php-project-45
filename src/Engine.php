@@ -8,6 +8,7 @@ use function Php\Project\Even\checkParityGame;
 use function Php\Project\Calc\checkCalcGame;
 use function Php\Project\Gcd\checkGcdGame;
 use function Php\Project\Progression\checkProgressionGame;
+use function Php\Project\Prime\checkPrimeGame;
 
 function engine(string $game): void
 {
@@ -20,6 +21,7 @@ function engine(string $game): void
         'calc' => checkCalcGame(),
         'gcd'  => checkGcdGame(),
         'progression' => checkProgressionGame(),
+        'prime' => checkPrimeGame(),
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);

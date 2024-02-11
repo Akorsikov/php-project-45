@@ -25,3 +25,8 @@
 - [install-progression](https://asciinema.org/a/s4GtPvewMCN4UIPeuwOIgDfHq)
 - [lose-progression](https://asciinema.org/a/lP2QchZ0p4KfY97kWFZfll9pG)
 - [win-progression](https://asciinema.org/a/st6NredxlgBvC31rvTo1478qE)
+
+#### Brain-prime
+- [install-prime](https://asciinema.org/a/em2GZjTti88VjrtNJRx5Ny9Qy)
+- [lose-prime](https://asciinema.org/a/oquBhiel6AXwSmlq4JzvhTi9n)
+- [win-prime](https://asciinema.org/a/WtfWDifSw5YqyUyGY7eNdCyuJ)
