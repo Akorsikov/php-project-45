@@ -11,7 +11,7 @@ const FINISH_RANDOM_NUMBER = 100;
 
 function checkParityGame(): bool
 {
-    line('Answer "yes" if the number is even, otherwise answer "no"');
+    line('Answer "yes" if the number is even, otherwise answer "no".');
     $countCorrectAnswer = 0;
 
     do {
