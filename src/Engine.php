@@ -11,7 +11,7 @@ use function Php\Project\Progression\checkProgressionGame;
 use function Php\Project\Prime\checkPrimeGame;
 use function Php\Project\Cli\greeting;
 
-function engine(string $game = 'other'): void
+function engine(string $game): void
 {
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
@@ -23,7 +23,7 @@ function engine(string $game = 'other'): void
         'gcd'  => checkGcdGame(),
         'progression' => checkProgressionGame(),
         'prime' => checkPrimeGame(),
-        'other' => greeting(),
+        default => greeting(),
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);
