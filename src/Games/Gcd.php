@@ -34,9 +34,7 @@ function checkGcdGame(): bool
     do {
         $randomNumberOne = notSimleRand();
         $randomNumberTwo = notSimleRand();
-
         $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberOne : $randomNumberTwo;
-        $firstDivisor = floor($firstDivisor / 2);
 
         for ($i = $firstDivisor; $i > 0; $i--) {
             if ($randomNumberOne % $i === 0 && $randomNumberTwo % $i === 0) {
