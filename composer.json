@@ -10,13 +10,15 @@
             "src/Games/Even.php",
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
-            "src/Games/Prime.php"
+            "src/Games/Prime.php",
+            "src/Cli.php"
         ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.22"
     },
     "bin": [
+        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
