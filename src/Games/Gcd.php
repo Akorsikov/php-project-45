@@ -35,13 +35,12 @@ function checkGcdGame(): bool
         $randomNumberOne = notSimleRand();
         $randomNumberTwo = notSimleRand();
         $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberOne : $randomNumberTwo;
+        $correctAnswer = 1;
 
         for ($i = $firstDivisor; $i > 0; $i--) {
             if ($randomNumberOne % $i === 0 && $randomNumberTwo % $i === 0) {
                 $correctAnswer = $i;
                 break;
-            } else {
-                $correctAnswer = 1;
             }
         }
 
