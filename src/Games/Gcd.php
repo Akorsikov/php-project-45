@@ -45,7 +45,6 @@ function checkGcdGame(): bool
             }
         }
 
-        line("подсказка: %s", $correctAnswer);
         line("Question: %s %s", $randomNumberOne, $randomNumberTwo);
         $gamerAnswer = prompt('Your answer');
         if ($gamerAnswer === "$correctAnswer") {
