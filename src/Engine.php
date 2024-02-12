@@ -9,19 +9,21 @@ use function Php\Project\Calc\checkCalcGame;
 use function Php\Project\Gcd\checkGcdGame;
 use function Php\Project\Progression\checkProgressionGame;
 use function Php\Project\Prime\checkPrimeGame;
+use function Php\Project\Cli\greeting;
 
-function engine(string $game): void
+function engine(string $game = 'other'): void
 {
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
 
-    $winner = match ($game . '') {
+    $winner = match ($game) {
         'even' => checkParityGame(),
         'calc' => checkCalcGame(),
         'gcd'  => checkGcdGame(),
         'progression' => checkProgressionGame(),
-        'prime' => checkPrimeGame()
+        'prime' => checkPrimeGame(),
+        'other' => greeting(),
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);
