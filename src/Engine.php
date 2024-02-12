@@ -21,7 +21,7 @@ function engine(string $game): void
         'calc' => checkCalcGame(),
         'gcd'  => checkGcdGame(),
         'progression' => checkProgressionGame(),
-        'prime' => checkPrimeGame(),
+        'prime' => checkPrimeGame()
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);

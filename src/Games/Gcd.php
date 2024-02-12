@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\gcd;
+namespace Php\Project\Gcd;
 
 use function cli\line;
 use function cli\prompt;
@@ -21,7 +21,7 @@ function notSimleRand()
     do {
         $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
         $loopsCounter++;
-    } while (in_array($randomNumber, SIMLE_NUMBER) || $loopsCounter <= LOOPS_NUMBER);
+    } while (in_array($randomNumber, SIMLE_NUMBER, true) || $loopsCounter <= LOOPS_NUMBER);
     return $randomNumber;
 }
 
@@ -35,7 +35,7 @@ function checkGcdGame(): bool
         $randomNumberOne = notSimleRand();
         $randomNumberTwo = notSimleRand();
 
-        $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberTwo : $randomNumberTwo;
+        $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberOne : $randomNumberTwo;
         $firstDivisor = floor($firstDivisor / 2);
 
         for ($i = $firstDivisor; $i > 0; $i--) {
@@ -45,6 +45,7 @@ function checkGcdGame(): bool
             }
         }
 
+        line("подсказка: %s", $correctAnswer);
         line("Question: %s %s", $randomNumberOne, $randomNumberTwo);
         $gamerAnswer = prompt('Your answer');
         if ($gamerAnswer === "$correctAnswer") {

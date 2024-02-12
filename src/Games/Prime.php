@@ -22,7 +22,7 @@ function checkPrimeGame(): bool
 
     do {
         $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-        $isPrimeNumber = in_array($randomNumber, PRIME_NUMBERS);
+        $isPrimeNumber = in_array($randomNumber, PRIME_NUMBERS, true);
         $correctAnswer = $isPrimeNumber ? 'yes' : 'no';
         line("Question: %s", $randomNumber);
         $gamerAnswer = prompt('Your answer');
