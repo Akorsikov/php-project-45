@@ -15,7 +15,7 @@ const SIMLE_NUMBER =
         43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
     ];
 
-function notSimleRand()
+function notSimleRand(): int
 {
     $loopsCounter = 0;
     do {
