@@ -16,12 +16,12 @@ function engine(string $game): void
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
 
-    $winner = match (true) {
-        $game === 'even' => checkParityGame(),
-        $game === 'calc' => checkCalcGame(),
-        $game === 'gcd'  => checkGcdGame(),
-        $game === 'progression' => checkProgressionGame(),
-        $game === 'prime' => checkPrimeGame()
+    $winner = match ($game . '') {
+        'even' => checkParityGame(),
+        'calc' => checkCalcGame(),
+        'gcd'  => checkGcdGame(),
+        'progression' => checkProgressionGame(),
+        'prime' => checkPrimeGame()
     };
     if ($winner) {
         line("Congratulations, %s!", $gamerName);
