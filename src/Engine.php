@@ -26,6 +26,6 @@ function engine(string $game): void
     if ($winner) {
         line("Congratulations, %s!", $gamerName);
     } else {
-        line("Let's try again, %s", $gamerName);
+        line("Let's try again, %s!", $gamerName);
     }
 }
