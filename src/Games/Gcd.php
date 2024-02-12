@@ -40,6 +40,8 @@ function checkGcdGame(): bool
             if ($randomNumberOne % $i === 0 && $randomNumberTwo % $i === 0) {
                 $correctAnswer = $i;
                 break;
+            } else {
+                $correctAnswer = 1;
             }
         }
 
