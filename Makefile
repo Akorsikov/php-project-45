@@ -24,3 +24,6 @@ validate:
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+
+analise:
+	vendor/bin/phpstan analyse --level 8 src bin
