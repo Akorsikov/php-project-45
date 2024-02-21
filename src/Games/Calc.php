@@ -41,5 +41,6 @@ function checkCalcGame(): bool
         }
     } while ($countCorrectAnswer < CORRECT_ANSWER);
 
-    return $countCorrectAnswer === CORRECT_ANSWER;
+    // return $countCorrectAnswer === CORRECT_ANSWER;
+    return true;
 }

@@ -11,4 +11,4 @@ if (file_exists($autoloadPathGlobal)) {
 }
 
 use function Php\Project\Engine\engine;
-engine('prime');
+engine('Php\Project\Prime\checkPrimeGame');
