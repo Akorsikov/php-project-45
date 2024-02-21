@@ -14,33 +14,32 @@ function checkCalcGame(): bool
 {
     line('What is the result of the expression?');
 
-    $countCorrectAnswer = 0;
+    $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
+    $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
+    $randomMathOperation = rand(0, count(MATH_OPERATIONS) - 1);
+    $mathOperation = MATH_OPERATIONS[$randomMathOperation];
 
-    do {
-        $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-        $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-        $randomMathOperation = rand(0, count(MATH_OPERATIONS) - 1);
-        $mathOperation = MATH_OPERATIONS[$randomMathOperation];
+    $correctAnswer = match ($mathOperation) {
+        '+' => $correctAnswer = $randomNumberOne + $randomNumberTwo,
+        '*' => $correctAnswer = $randomNumberOne * $randomNumberTwo,
+        '-' => $correctAnswer = $randomNumberOne - $randomNumberTwo
+    };
 
-        $correctAnswer = match ($mathOperation) {
-            '+' => $correctAnswer = $randomNumberOne + $randomNumberTwo,
-            '*' => $correctAnswer = $randomNumberOne * $randomNumberTwo,
-            '-' => $correctAnswer = $randomNumberOne - $randomNumberTwo
-        };
+    $mathTask = "{$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
+    line("Question: %s", $mathTask);
+    $gamerAnswer = prompt('Your answer');
 
-        $mathTask = "{$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
-        line("Question: %s", $mathTask);
-        $gamerAnswer = prompt('Your answer');
-        if ($gamerAnswer === "$correctAnswer") {
-            $countCorrectAnswer++;
-            line('Correct!');
-        } else {
-            line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
+    if ($gamerAnswer === "$correctAnswer") {
+        line('Correct!');
 
-            break;
-        }
-    } while ($countCorrectAnswer < CORRECT_ANSWER);
+        return true;
+    } else {
+        line(
+            '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
+            $gamerAnswer,
+            $correctAnswer
+        );
 
-    // return $countCorrectAnswer === CORRECT_ANSWER;
-    return true;
+        return false;
+    }
 }
