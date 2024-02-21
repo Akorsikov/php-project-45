@@ -13,19 +13,19 @@ function checkParityGame(): bool
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-    $evenNumber = ($randomNumber % 2 === 0);
+    $isEvenNumber = ($randomNumber % 2 === 0);
     line("Question: %s", $randomNumber);
     $gamerAnswer = prompt('Your answer');
 
     if (
-        $gamerAnswer === 'yes' && $evenNumber
-        || $gamerAnswer === 'no' && !$evenNumber
+        $gamerAnswer === 'yes' && $isEvenNumber
+        || $gamerAnswer === 'no' && !$isEvenNumber
     ) {
         line('Correct!');
 
         return true;
     } else {
-        if ($evenNumber) {
+        if ($isEvenNumber) {
             $correctAnswer = ($gamerAnswer === 'yes') ? 'no' : 'yes';
         } else {
             $correctAnswer = ($gamerAnswer === 'no') ? 'yes' : 'no';
