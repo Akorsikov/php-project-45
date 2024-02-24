@@ -20,7 +20,7 @@ function isSimpleNumber(int $number): bool
     return true;
 }
 
-function notSimleRand(): int
+function getNotSimleRand(): int
 {
     $loopsCounter = 1;
     do {
@@ -34,8 +34,8 @@ function checkGcdGame(): bool
 {
     line('Find the greatest common divisor of given numbers.');
 
-    $randomNumberOne = notSimleRand();
-    $randomNumberTwo = notSimleRand();
+    $randomNumberOne = getNotSimleRand();
+    $randomNumberTwo = getNotSimleRand();
     $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberOne : $randomNumberTwo;
     $correctAnswer = '1';
 
