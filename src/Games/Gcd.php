@@ -25,7 +25,6 @@ function notSimleRand(): int
     $loopsCounter = 1;
     do {
         $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-        var_dump('randomNumber: ', $randomNumber);
         $loopsCounter++;
     } while (isSimpleNumber($randomNumber) && $loopsCounter <= LOOPS_NUMBER);
     return $randomNumber;

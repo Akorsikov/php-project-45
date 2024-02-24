@@ -5,7 +5,6 @@ namespace Php\Project\Calc;
 use function cli\line;
 use function cli\prompt;
 
-const CORRECT_ANSWER = 3;
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 20;
 const MATH_OPERATIONS = ['+', '*', '-'];

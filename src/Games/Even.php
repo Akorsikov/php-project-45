@@ -35,6 +35,7 @@ function checkParityGame(): bool
             $gamerAnswer,
             $correctAnswer
         );
+
         return false;
     }
 }
