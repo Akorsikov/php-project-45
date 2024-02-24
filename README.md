@@ -25,6 +25,7 @@ make install
 **(Ru)** Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить **yes**, если число чётное, или **no** — если нечётное.
 
 Демонстрация игры (asciinema)
+
 - [lose-even](https://asciinema.org/a/g79StrDELgjeuIV1z4JLXdNHC)
 - [win-even](https://asciinema.org/a/1sufFt4Cggk54eOexkaUDCYB5)
 ---
@@ -45,6 +46,8 @@ make install
 
 **(Ru)** Суть игры в следующем: пользователю показывается два случайных числа, например, 25 и 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 
+Демонстрация игры (asciinema)
+
 - [lose-gcd](https://asciinema.org/a/I09SBgZcfH7Z3ZthNBYQs3Vye)
 - [win-gcd](https://asciinema.org/a/avB3tTZZ9AkMq5zwbvFMHRxaE)
 ---
@@ -54,6 +57,8 @@ make install
 
 **(Ru)** Суть игры в следующем: игроку показывается ряд чисел, образующий арифметическую прогрессию, с заменой любого из чисела двумя точками. Игрок должен определить это число.
 
+Демонстрация игры (asciinema)
+
 - [lose-progression](https://asciinema.org/a/lP2QchZ0p4KfY97kWFZfll9pG)
 - [win-progression](https://asciinema.org/a/st6NredxlgBvC31rvTo1478qE)
 ---
@@ -62,6 +67,8 @@ make install
 The essence of the game is the following: a user is shown a random number. He should answer **yes** if the number is [prime](https://en.wikipedia.org/wiki/Prime_number), or **no** if it is not prime.
 
 **(Ru)** Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить **yes**, если число [простое](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE), или **no** — если не простое.
+
+Демонстрация игры (asciinema)
 
 - [lose-prime](https://asciinema.org/a/oquBhiel6AXwSmlq4JzvhTi9n)
 - [win-prime](https://asciinema.org/a/WtfWDifSw5YqyUyGY7eNdCyuJ)
