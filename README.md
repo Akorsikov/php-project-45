@@ -16,6 +16,7 @@ git clone https://github.com/Akorsikov/php-project-45.git
 cd php-project-45
 make install
 ```
+[Demonstration Setup & Run](https://asciinema.org/a/TM3NrnjHQ9lAGA7GhMkAQQXG9)
 
 ## Brain Games
 
