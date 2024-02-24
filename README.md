@@ -16,6 +16,7 @@ git clone https://github.com/Akorsikov/php-project-45.git
 cd php-project-45
 make install
 ```
+
 ## Brain Games
 
 ### Brain-even (Проверка на чётность)
@@ -23,6 +24,12 @@ make install
 **(En)**  The essence of the game is the following: the user is shown a random number. And he should answer yes if the number is even or no if it is odd.
 
 **(Ru)** Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить **yes**, если число чётное, или **no** — если нечётное.
+
+#### Run
+
+```bash
+make brain-even
+```
 
 Демонстрация игры (asciinema)
 
@@ -35,6 +42,12 @@ make install
 
 **(Ru)** Суть игры в следующем: пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 
+#### Run
+
+```bash
+make brain-calc
+```
+
 Демонстрация игры (asciinema)
 
 - [lose-calc](https://asciinema.org/a/LfzCVA8bTsl99RSu2AOxia9nb)
@@ -45,6 +58,12 @@ make install
 **(En)** The essence of the game is as follows: the user is shown two random numbers, for example, 25 and 50. The user must calculate and enter the greatest common divisor (gcd) of these numbers.
 
 **(Ru)** Суть игры в следующем: пользователю показывается два случайных числа, например, 25 и 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+
+#### Run
+
+```bash
+make brain-gcd
+```
 
 Демонстрация игры (asciinema)
 
@@ -57,6 +76,12 @@ make install
 
 **(Ru)** Суть игры в следующем: игроку показывается ряд чисел, образующий арифметическую прогрессию, с заменой любого из чисела двумя точками. Игрок должен определить это число.
 
+#### Run
+
+```bash
+make brain-progression
+```
+
 Демонстрация игры (asciinema)
 
 - [lose-progression](https://asciinema.org/a/lP2QchZ0p4KfY97kWFZfll9pG)
@@ -67,6 +92,12 @@ make install
 The essence of the game is the following: a user is shown a random number. He should answer **yes** if the number is [prime](https://en.wikipedia.org/wiki/Prime_number), or **no** if it is not prime.
 
 **(Ru)** Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить **yes**, если число [простое](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE), или **no** — если не простое.
+
+#### Run
+
+```bash
+make brain-prime
+```
 
 Демонстрация игры (asciinema)
 
