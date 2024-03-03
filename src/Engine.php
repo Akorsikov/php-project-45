@@ -16,11 +16,25 @@ function engine(callable $game): void
     $roundsCounter = 1;
 
     do {
-        $winner = call_user_func($game);
-        $roundsCounter++;
-    } while ($winner && $roundsCounter <= NUMBER_OF_ROUNDS);
+        [$condition, $task, $correctAnswer] = [...call_user_func($game)];
+        line($condition);
+        line($task);
+        $gamerAnswer = prompt('Your answer');
+        $isWinner = ($gamerAnswer === $correctAnswer);
+        if ($isWinner) {
+            line('Correct!');
+            $roundsCounter++;
+        } else {
+            line(
+                '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
+                $gamerAnswer,
+                $correctAnswer
+            );
+            break;
+        }
+    } while ($isWinner && $roundsCounter <= NUMBER_OF_ROUNDS);
 
-    if ($winner) {
+    if ($isWinner) {
         line("Congratulations, %s!", $gamerName);
     } else {
         line("Let's try again, %s!", $gamerName);
