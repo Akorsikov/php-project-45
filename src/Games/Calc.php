@@ -26,9 +26,9 @@ function checkCalcGame(): bool
 
     $mathTask = "{$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
     line("Question: %s", $mathTask);
-    $gamerAnswer = prompt('Your answer');
+    $gamerAnswer =(string) prompt('Your answer');
 
-    if ($gamerAnswer === "$correctAnswer") {
+    if ($gamerAnswer === $correctAnswer) {
         line('Correct!');
 
         return true;
