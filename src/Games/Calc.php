@@ -7,6 +7,9 @@ const FINISH_RANDOM_NUMBER = 20;
 const MATH_OPERATIONS = ['+', '*', '-'];
 const CONDITION = 'What is the result of the expression?';
 
+/**
+ * @return array<string>
+ */
 function checkCalcGame(): array
 {
     $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
