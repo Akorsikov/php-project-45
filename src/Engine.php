@@ -12,9 +12,7 @@ function engine(callable $game): void
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
-
     $roundsCounter = 1;
-
     do {
         [$condition, $task, $correctAnswer] = [...call_user_func($game)];
         line($condition);
