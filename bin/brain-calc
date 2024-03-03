@@ -11,6 +11,4 @@ if (file_exists($autoloadPathGlobal)) {
 }
 
 use function Php\Project\Engine\engine;
-// use function Php\Project\Calc\checkCalcGame;
-// engine('calc');
 engine('Php\Project\Calc\checkCalcGame');
