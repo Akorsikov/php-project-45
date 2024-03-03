@@ -2,20 +2,19 @@
 
 namespace Php\Project\Progression;
 
-use function cli\line;
-use function cli\prompt;
-
 const MIN_LENGTH_PROGRESSION = 5;
 const MAX_LENGTH_PROGRESSION = 10;
 const MIN_START_ITEM = 0;
 const MAX_START_ITEM = 100;
 const MIN_STEP_PROGRESSION = 1;
 const MAX_STEP_PROGRESSION = 9;
+const CONDITION = 'What number is missing in the progression?';
 
-function checkProgressionGame(): bool
+/**
+ * @return array<string>
+ */
+function checkProgressionGame(): array
 {
-    line('What number is missing in the progression?');
-
     $lengthProgression = rand(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION);
     $stepProgression = rand(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
     $startItem = rand(MIN_START_ITEM, MAX_START_ITEM);
@@ -29,16 +28,8 @@ function checkProgressionGame(): bool
         1,
         ['..']
     )[0];
-    $stringQuestion = join(' ', $progression);
+    $stringProgression = join(' ', $progression);
+    $task = "Question: $stringProgression";
 
-    line("Question: %s", $stringQuestion);
-    $gamerAnswer = prompt('Your answer');
-
-    if ($gamerAnswer === $correctAnswer) {
-        line('Correct!');
-        return true;
-    } else {
-        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
-        return false;
-    }
+    return array(CONDITION, $task, $correctAnswer);
 }
