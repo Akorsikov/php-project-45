@@ -19,9 +19,9 @@ function checkCalcGame(): bool
     $mathOperation = MATH_OPERATIONS[$randomMathOperation];
 
     $correctAnswer = match ($mathOperation) {
-        '+' => $correctAnswer = $randomNumberOne + $randomNumberTwo,
-        '*' => $correctAnswer = $randomNumberOne * $randomNumberTwo,
-        '-' => $correctAnswer = $randomNumberOne - $randomNumberTwo
+        '+' => $randomNumberOne + $randomNumberTwo,
+        '*' => $randomNumberOne * $randomNumberTwo,
+        '-' => $randomNumberOne - $randomNumberTwo
     };
 
     $mathTask = "{$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
