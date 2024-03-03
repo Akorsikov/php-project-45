@@ -2,11 +2,9 @@
 
 namespace Php\Project\Prime;
 
-use function cli\line;
-use function cli\prompt;
-
 const START_RANDOM_NUMBER = 1;
 const FINISH_RANDOM_NUMBER = 100;
+const CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isSimpleNumber(int $number): bool
 {
@@ -19,17 +17,14 @@ function isSimpleNumber(int $number): bool
     return true;
 }
 
-function checkPrimeGame(): bool
+/**
+ * @return array<string>
+ */
+function checkPrimeGame(): array
 {
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
     $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
     $correctAnswer = isSimpleNumber($randomNumber) ? 'yes' : 'no';
-    line("Question: %s", $randomNumber);
-    $gamerAnswer = prompt('Your answer');
-    if ($gamerAnswer === $correctAnswer) {
-        return true;
-    } else {
-        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
-        return false;
-    }
+    $task = "Question: $randomNumber";
+
+    return array(CONDITION, $task, $correctAnswer);
 }
