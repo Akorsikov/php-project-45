@@ -23,7 +23,7 @@ function checkCalcGame(): array
         '-' => $randomNumberOne - $randomNumberTwo
     };
 
-    $task = "Question: {$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
+    $task = "Question: $randomNumberOne $mathOperation $randomNumberTwo";
 
     return array(CONDITION, $task, $correctAnswer);
 }
