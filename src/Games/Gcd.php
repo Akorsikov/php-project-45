@@ -2,12 +2,10 @@
 
 namespace Php\Project\Gcd;
 
-use function cli\line;
-use function cli\prompt;
-
 const START_RANDOM_NUMBER = 4;
 const FINISH_RANDOM_NUMBER = 100;
 const LOOPS_NUMBER = 10;
+const CONDITION = 'Find the greatest common divisor of given numbers.';
 
 function isSimpleNumber(int $number): bool
 {
@@ -30,9 +28,11 @@ function getNotSimleRand(): int
     return $randomNumber;
 }
 
-function checkGcdGame(): bool
+/**
+ * @return array<string>
+ */
+function checkGcdGame(): array
 {
-    line('Find the greatest common divisor of given numbers.');
 
     $randomNumberOne = getNotSimleRand();
     $randomNumberTwo = getNotSimleRand();
@@ -45,14 +45,7 @@ function checkGcdGame(): bool
             break;
         }
     }
+    $task = "Question: $randomNumberOne $randomNumberTwo";
 
-    line("Question: %s %s", $randomNumberOne, $randomNumberTwo);
-    $gamerAnswer = prompt('Your answer');
-    if ($gamerAnswer === $correctAnswer) {
-        line('Correct!');
-        return true;
-    } else {
-        line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $gamerAnswer, $correctAnswer);
-        return false;
-    }
+    return array(CONDITION, $task, $correctAnswer);
 }
