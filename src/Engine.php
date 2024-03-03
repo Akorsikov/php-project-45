@@ -21,6 +21,7 @@ function engine(callable $game): void
         line($task);
         $gamerAnswer = prompt('Your answer');
         $isWinner = ($gamerAnswer === $correctAnswer);
+
         if ($isWinner) {
             line('Correct!');
             $roundsCounter++;
@@ -32,7 +33,7 @@ function engine(callable $game): void
             );
             break;
         }
-    } while ($isWinner && $roundsCounter <= NUMBER_OF_ROUNDS);
+    } while ($roundsCounter <= NUMBER_OF_ROUNDS);
 
     if ($isWinner) {
         line("Congratulations, %s!", $gamerName);
