@@ -13,7 +13,8 @@ function checkGcdGame(): array
 {
     $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
     $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-    $firstDivisor = ($randomNumberOne < $randomNumberTwo) ? $randomNumberOne : $randomNumberTwo;
+    $firstDivisor = ($randomNumberOne < $randomNumberTwo) ?
+        $randomNumberOne : $randomNumberTwo;
     $correctAnswer = '1';
 
     for ($i = $firstDivisor; $i > 0; $i--) {
