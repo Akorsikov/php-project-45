@@ -12,26 +12,27 @@ function engine(callable $game): void
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
-    $roundsCounter = 1;
-    do {
-        [$condition, $task, $correctAnswer] = [...call_user_func($game)];
-        line($condition);
+
+    for ($roundsCounter = 1; $roundsCounter <= NUMBER_OF_ROUNDS; $roundsCounter++) {
+        [$condition, $task, $correctAnswer] = [...$game()];
+        if ($roundsCounter === 1) {
+            line($condition);
+        }
         line($task);
         $gamerAnswer = prompt('Your answer');
         $isWinner = ($gamerAnswer === $correctAnswer);
 
         if ($isWinner) {
             line('Correct!');
-            $roundsCounter++;
         } else {
             line(
                 '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
                 $gamerAnswer,
                 $correctAnswer
             );
-            break;
+            $roundsCounter = NUMBER_OF_ROUNDS + 1;
         }
-    } while ($roundsCounter <= NUMBER_OF_ROUNDS);
+    }
 
     if ($isWinner) {
         line("Congratulations, %s!", $gamerName);
