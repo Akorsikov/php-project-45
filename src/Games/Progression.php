@@ -28,7 +28,7 @@ function checkProgressionGame(): array
         1,
         ['..']
     )[0];
-    $stringProgression = join(' ', $progression);
+    $stringProgression = implode(' ', $progression);
     $task = "Question: $stringProgression";
 
     return array(CONDITION, $task, $correctAnswer);
