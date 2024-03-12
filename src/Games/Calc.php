@@ -27,5 +27,5 @@ function checkCalcGame(): array
 
     $task = "Question: $randomNumberOne $mathOperation $randomNumberTwo";
 
-    return array(CONDITION, $task, $correctAnswer);
+    return [CONDITION, $task, $correctAnswer];
 }
