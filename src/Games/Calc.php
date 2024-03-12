@@ -14,8 +14,10 @@ function checkCalcGame(): array
 {
     $randomNumberOne = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
     $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-    $randomMathOperation = rand(0, count(MATH_OPERATIONS) - 1);
-    $mathOperation = MATH_OPERATIONS[$randomMathOperation];
+
+    $indexRandomMathOperation = array_rand(MATH_OPERATIONS, 1);
+    $mathOperation = MATH_OPERATIONS[$indexRandomMathOperation];
+
 
     $correctAnswer = (string) match ($mathOperation) {
         '+' => $randomNumberOne + $randomNumberTwo,
