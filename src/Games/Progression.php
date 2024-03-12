@@ -22,14 +22,10 @@ function checkProgressionGame(): array
     $progression = range($startItem, $endItem, $stepProgression);
 
     $indexRequireNumber = rand(0, $lengthProgression - 1);
-    $correctAnswer = (string) array_splice(
-        $progression,
-        $indexRequireNumber,
-        1,
-        ['..']
-    )[0];
+    $correctAnswer = (string) $progression[$indexRequireNumber];
+    $progression[$indexRequireNumber] = '..';
     $stringProgression = implode(' ', $progression);
     $task = "Question: $stringProgression";
 
-    return array(CONDITION, $task, $correctAnswer);
+    return [CONDITION, $task, $correctAnswer];
 }
