@@ -30,9 +30,9 @@ function getGcd(int $numberA, int $numberB): int
 
 /**
  * Check if a number is prime
- * 
+ *
  * @param int $number test number
- * 
+ *
  * @return bool "true" if prime else "false"
  */
 function isPrime(int $number): bool
@@ -44,4 +44,21 @@ function isPrime(int $number): bool
         }
     }
     return true;
+}
+
+/**
+ * Execute math operation whith two numbers
+ *
+ * @param string    $operation     math operation as sring, example '+', '-' or '*'
+ * @param int|float $firstOperand  first operand math operation
+ * @param int|float $secondOperand second operand math operation
+ *
+ * @return int|float result of math operation as integer or float number
+ */
+function getMathOperation(
+    string $operation,
+    int|float $firstOperand,
+    int|float $secondOperand
+): int|float {
+    return eval("return {$firstOperand} {$operation} {$secondOperand};");
 }

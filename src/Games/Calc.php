@@ -2,6 +2,8 @@
 
 namespace Php\Project\Calc;
 
+use function Php\Project\Utils\getMathOperation;
+
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 20;
 const MATH_OPERATIONS = ['+', '*', '-'];
@@ -18,12 +20,11 @@ function checkCalcGame(): array
     $indexRandomMathOperation = array_rand(MATH_OPERATIONS, 1);
     $mathOperation = MATH_OPERATIONS[$indexRandomMathOperation];
 
-
-    $correctAnswer = (string) match ($mathOperation) {
-        '+' => $randomNumberOne + $randomNumberTwo,
-        '*' => $randomNumberOne * $randomNumberTwo,
-        '-' => $randomNumberOne - $randomNumberTwo
-    };
+    $correctAnswer = (string) getMathOperation(
+        $mathOperation,
+        $randomNumberOne,
+        $randomNumberTwo
+    );
 
     $task = "Question: $randomNumberOne $mathOperation $randomNumberTwo";
 
