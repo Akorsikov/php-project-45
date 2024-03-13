@@ -24,7 +24,7 @@ function isEven(int $number): bool
  */
 function getGcd(int $numberA, int $numberB): int
 {
-    return ($numberA % $numberB) ?
+    return ((bool)($numberA % $numberB)) ?
         getGcd($numberB, $numberA % $numberB) : abs($numberB);
 }
 
