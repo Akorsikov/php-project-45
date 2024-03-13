@@ -2,6 +2,8 @@
 
 namespace Php\Project\Progression;
 
+use function Php\Project\Utils\getProgression;
+
 const MIN_LENGTH_PROGRESSION = 5;
 const MAX_LENGTH_PROGRESSION = 10;
 const MIN_START_ITEM = 0;
@@ -18,8 +20,8 @@ function checkProgressionGame(): array
     $lengthProgression = rand(MIN_LENGTH_PROGRESSION, MAX_LENGTH_PROGRESSION);
     $stepProgression = rand(MIN_STEP_PROGRESSION, MAX_STEP_PROGRESSION);
     $startItem = rand(MIN_START_ITEM, MAX_START_ITEM);
-    $endItem = $startItem + ($lengthProgression - 1) * $stepProgression;
-    $progression = range($startItem, $endItem, $stepProgression);
+    $finishItem = $startItem + ($lengthProgression - 1) * $stepProgression;
+    $progression = getProgression($startItem, $finishItem, $stepProgression);
 
     $indexRequireNumber = rand(0, $lengthProgression - 1);
     $correctAnswer = (string) $progression[$indexRequireNumber];

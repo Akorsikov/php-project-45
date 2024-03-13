@@ -62,3 +62,17 @@ function getMathOperation(
 ): int|float {
     return eval("return {$firstOperand} {$operation} {$secondOperand};");
 }
+
+/**
+ * Arithmetic progression as an array, where
+ *
+ * @param int $start  start item of the array
+ * @param int $finish finish item of the array
+ * @param int $step   step between the items of the array
+ *
+ * @return array<int>
+ */
+function getProgression(int $start, int $finish, int $step): array
+{
+    return range($start, $finish, $step);
+}
