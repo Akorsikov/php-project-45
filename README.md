@@ -20,6 +20,9 @@ make install
 
 ## Brain Games
 
+"Brain Games" - a set of five console games, built on the principle of popular mobile applications for brain pumping. Each game asks questions to which you have to give correct answers. After three correct answers, the game is considered to be completed. Incorrect answers end the game and offer to play it again.
+
+---
 ### Brain-even (Проверка на чётность)
 
 **(En)**  The essence of the game is the following: the user is shown a random number. And he should answer yes if the number is even or no if it is odd.
