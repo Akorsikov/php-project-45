@@ -12,6 +12,7 @@ function runGame(callable $game): void
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
+    $isWinner = false;
 
     for ($roundsCounter = 1; $roundsCounter <= NUMBER_OF_ROUNDS; $roundsCounter++) {
         [$condition, $task, $correctAnswer] = [...$game()];
