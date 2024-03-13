@@ -12,12 +12,9 @@ function runGame(callable $game): void
     line('', 'Welcome to the Brain Games!');
     $gamerName = prompt('May I have your name?');
     line('Hello, %s', $gamerName);
+    $roundsCounter = 1;
 
-    for (
-        $roundsCounter = 1, $isWinner = false;
-        $roundsCounter <= NUMBER_OF_ROUNDS;
-        $roundsCounter++
-    ) {
+    do {
         [$condition, $task, $correctAnswer] = [...$game()];
         if ($roundsCounter === 1) {
             line($condition);
@@ -28,6 +25,7 @@ function runGame(callable $game): void
 
         if ($isWinner) {
             line('Correct!');
+            $roundsCounter++;
         } else {
             line(
                 '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
@@ -36,7 +34,7 @@ function runGame(callable $game): void
             );
             $roundsCounter = NUMBER_OF_ROUNDS + 1;
         }
-    }
+    } while ($roundsCounter <= NUMBER_OF_ROUNDS);
 
     if ($isWinner) {
         line("Congratulations, %s!", $gamerName);
