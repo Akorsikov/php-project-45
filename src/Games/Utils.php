@@ -3,11 +3,11 @@
 namespace Php\Project\Utils;
 
 /**
- * Even or not
+ * Check if a number is even
  *
  * @param int $number checks if the number is even or not.
  *
- * @return bool
+ * @return bool "true" if even else "false"
  */
 function isEven(int $number): bool
 {
@@ -15,15 +15,33 @@ function isEven(int $number): bool
 }
 
 /**
- * Greatest common divisor (gcd)
+ * Greatest common divisor (gcd) for two numbers
  *
- * @param int $numberA first the number
- * @param int $numberB second the number
+ * @param int $numberA first integer
+ * @param int $numberB second integer
  *
- * @return int gcd
+ * @return int the greatest common divisor as a positive integer
  */
 function getGcd(int $numberA, int $numberB): int
 {
     return ($numberA % $numberB) ?
         getGcd($numberB, $numberA % $numberB) : abs($numberB);
+}
+
+/**
+ * Check if a number is prime
+ * 
+ * @param int $number test number
+ * 
+ * @return bool "true" if prime else "false"
+ */
+function isPrime(int $number): bool
+{
+    $halfNumber = floor($number / 2);
+    for ($i = $halfNumber; $i > 1; $i--) {
+        if ($number % $i === 0 && $i > 1) {
+            return false;
+        }
+    }
+    return true;
 }
