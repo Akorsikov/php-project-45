@@ -4,7 +4,7 @@ namespace Php\Project\Gcd;
 
 use function Php\Project\Utils\getGcd;
 
-const START_RANDOM_NUMBER = 0;
+const START_RANDOM_NUMBER = 1;
 const FINISH_RANDOM_NUMBER = 100;
 const CONDITION = 'Find the greatest common divisor of given numbers.';
 
