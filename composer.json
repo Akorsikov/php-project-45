@@ -11,7 +11,6 @@
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php",
-            "src/Games/Utils.php",
             "src/Cli.php"
         ]
     },

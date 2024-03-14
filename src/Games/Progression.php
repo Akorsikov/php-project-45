@@ -2,8 +2,6 @@
 
 namespace Php\Project\Progression;
 
-use function Php\Project\Utils\getProgression;
-
 const MIN_LENGTH_PROGRESSION = 5;
 const MAX_LENGTH_PROGRESSION = 10;
 const MIN_START_ITEM = 0;
@@ -30,4 +28,18 @@ function checkProgressionGame(): array
     $task = "Question: $stringProgression";
 
     return [CONDITION, $task, $correctAnswer];
+}
+
+/**
+ * Arithmetic progression as an array, where
+ *
+ * @param int $start  start item of the array
+ * @param int $finish finish item of the array
+ * @param int $step   step between the items of the array
+ *
+ * @return array<int>
+ */
+function getProgression(int $start, int $finish, int $step): array
+{
+    return range($start, $finish, $step);
 }

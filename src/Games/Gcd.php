@@ -2,8 +2,6 @@
 
 namespace Php\Project\Gcd;
 
-use function Php\Project\Utils\getGcd;
-
 const START_RANDOM_NUMBER = 1;
 const FINISH_RANDOM_NUMBER = 100;
 const CONDITION = 'Find the greatest common divisor of given numbers.';
@@ -20,4 +18,18 @@ function checkGcdGame(): array
     $task = "Question: $randomNumberOne $randomNumberTwo";
 
     return array(CONDITION, $task, $correctAnswer);
+}
+
+/**
+ * Greatest common divisor (gcd) for two numbers
+ *
+ * @param int $numberA first integer
+ * @param int $numberB second integer
+ *
+ * @return int the greatest common divisor as a positive integer
+ */
+function getGcd(int $numberA, int $numberB): int
+{
+    return ((bool)($numberA % $numberB)) ?
+        getGcd($numberB, $numberA % $numberB) : abs($numberB);
 }

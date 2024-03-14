@@ -2,8 +2,6 @@
 
 namespace Php\Project\Calc;
 
-use function Php\Project\Utils\getMathOperation;
-
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 20;
 const MATH_OPERATIONS = ['+', '*', '-'];
@@ -29,4 +27,21 @@ function checkCalcGame(): array
     $task = "Question: $randomNumberOne $mathOperation $randomNumberTwo";
 
     return [CONDITION, $task, $correctAnswer];
+}
+
+/**
+ * Execute math operation whith two numbers
+ *
+ * @param string    $operation     math operation as sring, example '+', '-' or '*'
+ * @param int|float $firstOperand  first operand math operation
+ * @param int|float $secondOperand second operand math operation
+ *
+ * @return int|float result of math operation as integer or float number
+ */
+function getMathOperation(
+    string $operation,
+    int|float $firstOperand,
+    int|float $secondOperand
+): int|float {
+    return eval("return {$firstOperand} {$operation} {$secondOperand};");
 }
