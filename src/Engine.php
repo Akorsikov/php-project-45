@@ -4,41 +4,33 @@ namespace Php\Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
+use function Php\Project\Cli\greeting;
 
 const NUMBER_OF_ROUNDS = 3;
 
 function runGame(callable $game): void
 {
-    line('', 'Welcome to the Brain Games!');
-    $gamerName = prompt('May I have your name?');
-    line('Hello, %s', $gamerName);
-    $roundsCounter = 1;
+    $gamerName = greeting();
 
-    do {
+    for ($i = 1; $i <= NUMBER_OF_ROUNDS; $i++) {
         [$condition, $task, $correctAnswer] = [...$game()];
-        if ($roundsCounter === 1) {
+        if ($i === 1) {
             line($condition);
         }
         line($task);
         $gamerAnswer = prompt('Your answer');
-        $isWinner = ($gamerAnswer === $correctAnswer);
 
-        if ($isWinner) {
+        if ($gamerAnswer === $correctAnswer) {
             line('Correct!');
-            $roundsCounter++;
         } else {
             line(
                 '\'%s\' is wrong answer ;(. Correct answer was \'%s\'.',
                 $gamerAnswer,
                 $correctAnswer
             );
-            $roundsCounter = NUMBER_OF_ROUNDS + 1;
+            line("Let's try again, %s!", $gamerName);
+            return;
         }
-    } while ($roundsCounter <= NUMBER_OF_ROUNDS);
-
-    if ($isWinner) {
-        line("Congratulations, %s!", $gamerName);
-    } else {
-        line("Let's try again, %s!", $gamerName);
     }
+    line("Congratulations, %s!", $gamerName);
 }
