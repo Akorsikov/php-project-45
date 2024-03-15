@@ -2,11 +2,25 @@
 
 namespace Php\Project\Gcd;
 
+use function Php\Project\Engine\runGame;
+
 const START_RANDOM_NUMBER = 1;
 const FINISH_RANDOM_NUMBER = 100;
 const CONDITION = 'Find the greatest common divisor of given numbers.';
 
 /**
+ * Function called engine of games "Brain-games"
+ *
+ * @return void
+ */
+function run(): void
+{
+    runGame(fn() => checkGcdGame());
+}
+
+/**
+ * Function is logic of game "Brain-gcd"
+ *
  * @return array<string>
  */
 function checkGcdGame(): array

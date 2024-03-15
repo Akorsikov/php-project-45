@@ -2,11 +2,25 @@
 
 namespace Php\Project\Even;
 
+use function Php\Project\Engine\runGame;
+
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 100;
 const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 /**
+ * Function called engine of games "Brain-games"
+ *
+ * @return void
+ */
+function run(): void
+{
+    runGame(fn() => checkParityGame());
+}
+
+/**
+ * Function is logic of game "Brain-even"
+ *
  * @return array<string>
  */
 function checkParityGame(): array

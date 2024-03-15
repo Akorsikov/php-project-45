@@ -9,5 +9,5 @@ if (file_exists($autoloadPathGlobal)) {
     require_once $autoloadPathLocal;
 }
 
-use function Php\Project\Engine\runGame;
-runGame('Php\Project\Gcd\checkGcdGame');
+use function Php\Project\Gcd\run;
+run();

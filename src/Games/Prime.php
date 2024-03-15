@@ -2,11 +2,25 @@
 
 namespace Php\Project\Prime;
 
+use function Php\Project\Engine\runGame;
+
 const START_RANDOM_NUMBER = 1;
 const FINISH_RANDOM_NUMBER = 100;
 const CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 /**
+ * Function called engine of games "Brain-games"
+ *
+ * @return void
+ */
+function run(): void
+{
+    runGame(fn() => checkPrimeGame());
+}
+
+/**
+ * Function is logic of game "Brain-prime"
+ *
  * @return array<string>
  */
 function checkPrimeGame(): array

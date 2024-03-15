@@ -2,6 +2,8 @@
 
 namespace Php\Project\Progression;
 
+use function Php\Project\Engine\runGame;
+
 const MIN_LENGTH_PROGRESSION = 5;
 const MAX_LENGTH_PROGRESSION = 10;
 const MIN_START_ITEM = 0;
@@ -11,6 +13,18 @@ const MAX_STEP_PROGRESSION = 9;
 const CONDITION = 'What number is missing in the progression?';
 
 /**
+ * Function called engine of games "Brain-games"
+ *
+ * @return void
+ */
+function run(): void
+{
+    runGame(fn() => checkProgressionGame());
+}
+
+/**
+ * Function is logic of game "Brain-progression"
+ *
  * @return array<string>
  */
 function checkProgressionGame(): array

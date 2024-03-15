@@ -2,12 +2,26 @@
 
 namespace Php\Project\Calc;
 
+use function Php\Project\Engine\runGame;
+
 const START_RANDOM_NUMBER = 0;
 const FINISH_RANDOM_NUMBER = 20;
 const MATH_OPERATIONS = ['+', '*', '-'];
 const CONDITION = 'What is the result of the expression?';
 
 /**
+ * Function called engine of games "Brain-games"
+ *
+ * @return void
+ */
+function run(): void
+{
+    runGame(fn() => checkCalcGame());
+}
+
+/**
+ * Function is logic of game "Brain-calc"
+ *
  * @return array<string>
  */
 function checkCalcGame(): array
