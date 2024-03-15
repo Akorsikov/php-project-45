@@ -8,6 +8,13 @@ use function Php\Project\Cli\greeting;
 
 const NUMBER_OF_ROUNDS = 3;
 
+/**
+ * Function is engine of "Brain games"
+ *
+ * @param callable $game callable game function
+ *
+ * @return void
+ */
 function runGame(callable $game): void
 {
     $gamerName = greeting();
