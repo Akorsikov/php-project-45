@@ -29,7 +29,7 @@ function checkGcdGame(): array
     $randomNumberTwo = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
 
     $correctAnswer = (string) getGcd($randomNumberOne, $randomNumberTwo);
-    $task = "Question: $randomNumberOne $randomNumberTwo";
+    $task = "Question: {$randomNumberOne} {$randomNumberTwo}";
 
     return array(CONDITION, $task, $correctAnswer);
 }

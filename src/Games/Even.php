@@ -26,7 +26,7 @@ function run(): void
 function checkParityGame(): array
 {
     $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
-    $task = "Question: $randomNumber";
+    $task = "Question: {$randomNumber}";
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
     return array(CONDITION, $task, $correctAnswer);

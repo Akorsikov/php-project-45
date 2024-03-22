@@ -39,7 +39,7 @@ function checkProgressionGame(): array
     $correctAnswer = (string) $progression[$indexRequireNumber];
     $progression[$indexRequireNumber] = '..';
     $stringProgression = implode(' ', $progression);
-    $task = "Question: $stringProgression";
+    $task = "Question: {$stringProgression}";
 
     return [CONDITION, $task, $correctAnswer];
 }

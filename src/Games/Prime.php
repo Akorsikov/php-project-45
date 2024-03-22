@@ -27,7 +27,7 @@ function checkPrimeGame(): array
 {
     $randomNumber = rand(START_RANDOM_NUMBER, FINISH_RANDOM_NUMBER);
     $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
-    $task = "Question: $randomNumber";
+    $task = "Question: {$randomNumber}";
 
     return array(CONDITION, $task, $correctAnswer);
 }
