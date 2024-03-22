@@ -9,5 +9,5 @@ if (file_exists($autoloadPathGlobal)) {
     require_once $autoloadPathLocal;
 }
 
-use function Php\Project\Prime\run;
+use function Php\Project\Games\Prime\run;
 run();
