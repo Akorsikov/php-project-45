@@ -44,6 +44,6 @@ function checkGcdGame(): array
  */
 function getGcd(int $numberA, int $numberB): int
 {
-    return ((bool)($numberA % $numberB)) ?
+    return (($numberA % $numberB) !== 0) ?
         getGcd($numberB, $numberA % $numberB) : abs($numberB);
 }
