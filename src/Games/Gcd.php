@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Gcd;
+namespace Php\Project\Games\Gcd;
 
 use function Php\Project\Engine\runGame;
 
