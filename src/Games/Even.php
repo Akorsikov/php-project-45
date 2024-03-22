@@ -15,7 +15,7 @@ const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
  */
 function run(): void
 {
-    runGame(fn() => checkParityGame());
+    runGame(fn() => checkParityGame(), CONDITION);
 }
 
 /**
@@ -29,7 +29,7 @@ function checkParityGame(): array
     $task = "Question: {$randomNumber}";
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
-    return array(CONDITION, $task, $correctAnswer);
+    return array($task, $correctAnswer);
 }
 
 /**

@@ -16,7 +16,7 @@ const CONDITION = 'What is the result of the expression?';
  */
 function run(): void
 {
-    runGame(fn() => checkCalcGame());
+    runGame(fn() => checkCalcGame(), CONDITION);
 }
 
 /**
@@ -40,7 +40,7 @@ function checkCalcGame(): array
 
     $task = "Question: {$randomNumberOne} {$mathOperation} {$randomNumberTwo}";
 
-    return [CONDITION, $task, $correctAnswer];
+    return [$task, $correctAnswer];
 }
 
 /**

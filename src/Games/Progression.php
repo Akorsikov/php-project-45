@@ -19,7 +19,7 @@ const CONDITION = 'What number is missing in the progression?';
  */
 function run(): void
 {
-    runGame(fn() => checkProgressionGame());
+    runGame(fn() => checkProgressionGame(), CONDITION);
 }
 
 /**
@@ -41,7 +41,7 @@ function checkProgressionGame(): array
     $stringProgression = implode(' ', $progression);
     $task = "Question: {$stringProgression}";
 
-    return [CONDITION, $task, $correctAnswer];
+    return [$task, $correctAnswer];
 }
 
 /**

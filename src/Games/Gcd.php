@@ -15,7 +15,7 @@ const CONDITION = 'Find the greatest common divisor of given numbers.';
  */
 function run(): void
 {
-    runGame(fn() => checkGcdGame());
+    runGame(fn() => checkGcdGame(), CONDITION);
 }
 
 /**
@@ -31,7 +31,7 @@ function checkGcdGame(): array
     $correctAnswer = (string) getGcd($randomNumberOne, $randomNumberTwo);
     $task = "Question: {$randomNumberOne} {$randomNumberTwo}";
 
-    return array(CONDITION, $task, $correctAnswer);
+    return array($task, $correctAnswer);
 }
 
 /**

@@ -15,7 +15,7 @@ const CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".
  */
 function run(): void
 {
-    runGame(fn() => checkPrimeGame());
+    runGame(fn() => checkPrimeGame(), CONDITION);
 }
 
 /**
@@ -29,7 +29,7 @@ function checkPrimeGame(): array
     $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
     $task = "Question: {$randomNumber}";
 
-    return array(CONDITION, $task, $correctAnswer);
+    return array($task, $correctAnswer);
 }
 
 /**
