@@ -46,16 +46,20 @@ function checkCalcGame(): array
 /**
  * Execute math operation whith two numbers
  *
- * @param string    $operation     math operation as sring, example '+', '-' or '*'
- * @param int|float $firstOperand  first operand math operation
- * @param int|float $secondOperand second operand math operation
+ * @param string $operation     math operation as sring, example '+', '*' or '-'
+ * @param int    $firstOperand  first operand math operation
+ * @param int    $secondOperand second operand math operation
  *
- * @return int|float result of math operation as integer or float number
+ * @return int result of math operation as integer number
  */
 function getMathOperation(
     string $operation,
-    int|float $firstOperand,
-    int|float $secondOperand
-): int|float {
-    return eval("return {$firstOperand} {$operation} {$secondOperand};");
+    int $firstOperand,
+    int $secondOperand
+): int {
+    return match ($operation) {
+        '+' => $firstOperand + $secondOperand,
+        '*' => $firstOperand * $secondOperand,
+        '-' => $firstOperand - $secondOperand
+    };
 }
