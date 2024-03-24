@@ -50,17 +50,17 @@ function checkCalcGame(): array
  * @param int    $firstOperand  first operand math operation
  * @param int    $secondOperand second operand math operation
  *
- * @return int|null result of math operation as integer number
+ * @return int result of math operation as integer number
  */
 function getMathOperation(
     string $operation,
     int $firstOperand,
     int $secondOperand
-): int|null {
+): int {
     return match ($operation) {
         '+' => $firstOperand + $secondOperand,
         '*' => $firstOperand * $secondOperand,
         '-' => $firstOperand - $secondOperand,
-        default => null
+        default => exit('ERROR: operation cannot be executed')
     };
 }
