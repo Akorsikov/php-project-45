@@ -47,5 +47,5 @@ function isPrime(int $number): bool
             return false;
         }
     }
-    return true;
+    return ($number === 1) ? false : true;
 }
